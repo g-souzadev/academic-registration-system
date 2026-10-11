@@ -28,4 +28,18 @@ public class Aluno extends Pessoa{
     public void setNotas(double[] notas){
         this.notas = notas;
     }
+
+    @Override
+    public void exibirDados() {
+        super.exibirDados();
+        System.out.println("Tipo: Aluno");
+        System.out.println("Matrícula: " + matricula);
+        System.out.print("Notas: ");
+
+        for (double nota : notas) {
+            System.out.print(nota + " ");
+        }
+
+        System.out.println();
+    }
 }

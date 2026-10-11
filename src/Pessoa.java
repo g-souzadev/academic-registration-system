@@ -35,4 +35,10 @@ public class Pessoa {
     public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
+
+    public void exibirDados() {
+        System.out.println("Nome: " + nome);
+        System.out.println("CPF: " + cpf);
+        System.out.println("Data de Nascimento: " + dataNascimento);
+    }
 }

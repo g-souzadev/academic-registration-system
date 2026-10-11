@@ -28,4 +28,12 @@ public class Professor extends Pessoa{
     public void setTitulacao(String titulacao){
         this.titulacao = titulacao;
     }
+
+    @Override
+    public void exibirDados() {
+        super.exibirDados();
+        System.out.println("Tipo: Professor");
+        System.out.println("Disciplina: " + disciplina);
+        System.out.println("Titulação: " + titulacao);
+    }
 }
