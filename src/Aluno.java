@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Aluno extends Pessoa{
     private String matricula;
     private double[] notas;
@@ -6,7 +8,7 @@ public class Aluno extends Pessoa{
         super();
     }
 
-    public Aluno(String nome, String cpf, String dataNascimento,
+    public Aluno(String nome, String cpf, LocalDate dataNascimento,
                  String matricula, double[] notas){
         super(nome, cpf, dataNascimento);
         this.matricula = matricula;

@@ -1,12 +1,15 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class Pessoa {
     private String nome;
     private String cpf;
-    private String dataNascimento;
+    private LocalDate dataNascimento;
 
     public Pessoa() {
     }
 
-    public Pessoa(String nome, String cpf, String dataNascimento) {
+    public Pessoa(String nome, String cpf, LocalDate dataNascimento) {
         this.nome = nome;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
@@ -28,17 +31,19 @@ public class Pessoa {
         this.cpf = cpf;
     }
 
-    public String getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(String dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
     public void exibirDados() {
+        DateTimeFormatter formatoBrasileiro = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
         System.out.println("Nome: " + nome);
         System.out.println("CPF: " + cpf);
-        System.out.println("Data de Nascimento: " + dataNascimento);
+        System.out.println("Data de Nascimento: " + dataNascimento.format(formatoBrasileiro));
     }
 }

@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Professor extends Pessoa{
     private String disciplina;
     private String titulacao;
@@ -6,7 +8,7 @@ public class Professor extends Pessoa{
         super();
     }
 
-    public Professor(String nome, String cpf, String dataNascimento,
+    public Professor(String nome, String cpf, LocalDate dataNascimento,
                      String disciplina, String titulacao){
         super(nome, cpf, dataNascimento);
         this.disciplina = disciplina;
